@@ -204,7 +204,6 @@ def test_ae(dataset_dir,model_id):
 
 	curr_result_dir = result_dir+geometric_object+'/'+model_id+'/'
 	if (os.path.isdir(curr_result_dir)==0):
-		pdb.set_trace()
 		os.mkdir(curr_result_dir)
 
 	ae_model = create_ae_model(parameter_struct['input_shape'],parameter_struct,model_id)
@@ -224,9 +223,9 @@ if __name__ == '__main__':
 
 	FLAGS = flags.FLAGS
 
-	# if (FLAGS.use_gpu == 0):
-	# 	os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID" 
-	# 	os.environ['CUDA_VISIBLE_DEVICES'] = ''	#deactivate gpu
+	if (FLAGS.use_gpu == 0):
+		os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID" 
+		os.environ['CUDA_VISIBLE_DEVICES'] = ''	#deactivate gpu
 
 	# create directories if necessary
 	if (os.path.isdir(model_dir)==0):
