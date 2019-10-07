@@ -23,7 +23,8 @@ The code is written in Python 3.6 and requires the following packages :
 ## Setting up the code
 * Install the required packages (with either pip or anaconda)
 * Download the code from the GitHub repository :
-```bash git clone https://github.com/alasdairnewson/geometric_autoencoder
+```
+bash git clone https://github.com/alasdairnewson/geometric_autoencoder
 cd geometric_autoencoder
 ```
 
